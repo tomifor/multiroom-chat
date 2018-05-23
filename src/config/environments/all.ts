@@ -5,6 +5,6 @@ export =<IEnv> {
     maxMessageCache:50,
     port : 8080,
     version:require('../../package.json').version,
-    socketUrl:'http://localhost:8080'
+    // socketUrl:'8080'
 
 }

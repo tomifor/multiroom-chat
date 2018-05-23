@@ -29,7 +29,10 @@ export class ClientsManager{
     @appolo.initMethod()
     public initialize () {
 
-        this.io.sockets.on('connection', this._onSocketConnection.bind(this));
+        this.io.sockets.on('connection', function() {
+            console.log('Connecting....');
+            this._onSocketConnection.bind(this)
+        });
     }
 
     public getClientById(id:string):SocketClient{
